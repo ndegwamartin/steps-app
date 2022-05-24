@@ -31,6 +31,9 @@ jobs:
           FIREBASE_CONFIG: ${{ secrets.FIREBASE_CONFIG }}
         run: echo $FIREBASE_CONFIG > google-services.json
 
+      - name: Show current directory
+        run: pwd
+
       - name: Show folder contents
         run: ls -lha
 
