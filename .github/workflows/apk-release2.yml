@@ -25,6 +25,11 @@ jobs:
         run: echo $ENCODED_KEYSTORE | base64 -di > "${HOME}"/steps.keystore.jks
         env:
           ENCODED_KEYSTORE: ${{ secrets.KEYSTORE_FILE }}  
+               
+      - name: Decode google-services.json
+        env:
+          FIREBASE_CONFIG: ${{ secrets.FIREBASE_CONFIG }}
+        run: echo $FIREBASE_CONFIG > google-services.json
 
       - name: Checkout 🛎️
         uses: actions/checkout@v2
