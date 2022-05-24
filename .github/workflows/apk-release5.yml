@@ -30,7 +30,6 @@ jobs:
         env:
           FIREBASE_CONFIG: ${{ secrets.FIREBASE_CONFIG }}
         run: echo $FIREBASE_CONFIG > google-services.json
-        working-directory: steps-app
 
       - name: Checkout 🛎️
         uses: actions/checkout@v2
