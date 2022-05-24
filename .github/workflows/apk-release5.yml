@@ -31,6 +31,9 @@ jobs:
           FIREBASE_CONFIG: ${{ secrets.FIREBASE_CONFIG }}
         run: echo $FIREBASE_CONFIG > google-services.json
 
+      - name: Show folder contents
+        run: ls -lha
+
       - name: Checkout 🛎️
         uses: actions/checkout@v2
         with:
